@@ -18,6 +18,6 @@ export default function todoReducer(state = [], action) {
             newState[action.toggleId].isFinish = !newState[action.toggleId].isFinish
             return newState;
         default:
-            return state;
+            return newState;
     }
 }

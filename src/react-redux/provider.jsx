@@ -17,9 +17,9 @@ export default class Provider extends React.Component {
             store: this.props.value
         }
     }
-    getStore() {
+    getStore = () => {
         this.setState({
-            store: this.props.value
+            store: {...this.props.value}
         })
     }
     componentDidMount() {

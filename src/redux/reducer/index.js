@@ -8,4 +8,4 @@ const reducer = {
     filter: filterReducer
 }
 
-export default combineReducers({ reducer });
+export default combineReducers(reducer);
