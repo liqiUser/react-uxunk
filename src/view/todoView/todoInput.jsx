@@ -27,6 +27,9 @@ class TodoInput extends React.Component {
         })
     }
     handlerClick = () => {
+        if (!this.state.text) {
+            return false;
+        }
         this.props.addTodo(this.state.text);
         this.setState({
             text: ''
