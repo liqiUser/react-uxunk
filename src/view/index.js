@@ -1,29 +1,19 @@
 import React from 'react';
 
-import { connect } from '../react-redux';
+import Filter from './filterView';
+import Todo from './todoView';
 
-import { todoAction } from '../redux/action';
+import './index.css';
 
 class Src extends React.Component {
     render() {
-        console.log(this.props);
         return (
-            <React.Fragment>
-                <div onClick={() => this.props.handlerClick('哈哈哈')}>Click Me</div>
-                <div onClick={() => console.log(this.props)}>print</div>
-            </React.Fragment>
+            <div className='todo-list'>
+                <Todo />
+                <Filter />
+            </div>
         )
     }
 }
 
-function mapState(state, ownProp) {
-    return state;
-}
-
-function mapDispatch(dispatch) {
-    return {
-        handlerClick: (addText) => dispatch(todoAction.addAction(addText))
-    }
-}
-
-export default connect(mapState, mapDispatch)(Src);
+export default Src;

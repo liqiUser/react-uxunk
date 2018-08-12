@@ -1,0 +1,59 @@
+input, button, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+ul {
+    list-style: none;
+}
+input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+}
+
+.todo-list {
+    margin: 20px auto;
+    width: 264px;
+}
+.todo-list > div > div > button {
+    border: 1px solid #e4393c;
+    border-radius: 5px;
+    background: #e4393c;
+    color: #fff;
+    width: 50px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.todo-list > div > ul {
+    height: 300px;
+    overflow-y: auto;
+}
+.todo-list > div > ul > li {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+}
+.todo-list > div > ul > li > span {
+    flex: 1;
+    margin-left: 10px;
+}
+.todo-list > div > ul > li > button {
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    background: #fff;
+    font-size: 24px;
+    border: none;
+}
+.todo-list > ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}

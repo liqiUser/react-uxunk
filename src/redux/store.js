@@ -4,7 +4,7 @@ import reducer from './reducer';
 
 const defaultState = {
     todo: [],
-    filter: '全部'
+    filter: 'all'
 }
 
 const store = createStore(reducer, defaultState);
