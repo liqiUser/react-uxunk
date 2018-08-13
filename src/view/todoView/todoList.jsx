@@ -34,7 +34,6 @@ const mapDispatch = dispatch => {
 }
 
 function TodoList({todoList, removeList, toggleList}) {
-    console.log(todoList);
     return (
         <ul>
             {

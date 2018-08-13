@@ -1,4 +1,4 @@
-import { todoActionType } from '../actionType';
+import { todoActionType, asynchronousActionType } from '../actionType';
 
 export default function todoReducer(state = [], action) {
     let newState = JSON.parse(JSON.stringify(state));
@@ -19,6 +19,9 @@ export default function todoReducer(state = [], action) {
                     item.isFinish = !item.isFinish
                 }
             })
+            return newState;
+        case asynchronousActionType.ASYNCFINIST:
+            newState.push(action.data);
             return newState;
         default:
             return newState;

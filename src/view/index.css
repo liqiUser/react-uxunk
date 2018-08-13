@@ -57,3 +57,14 @@ input {
     justify-content: space-around;
     margin: 10px 0;
 }
+.async-btn {
+    width: 200px;
+    border: 1px solid #e4393c;
+    border-radius: 5px;
+    background: #e4393c;
+    color: #fff;
+    margin: 10px auto;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+}
