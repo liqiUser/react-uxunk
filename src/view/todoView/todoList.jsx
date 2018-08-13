@@ -38,16 +38,16 @@ function TodoList({todoList, removeList, toggleList}) {
     return (
         <ul>
             {
-                todoList.map(item => {
+                todoList.map((item, index) => {
                     return (
-                        <li key={item.id}>
-                            <span onClick={() => toggleList(item.id)}>
+                        <li key={index}>
+                            <span onClick={() => toggleList(index)}>
                                 {
                                     item.isFinish ? 
                                         <s>{item.text}</s> : <span>{item.text}</span>
                                 }
                             </span>
-                            <button onClick={() => removeList(item.id)}>×</button>
+                            <button onClick={() => removeList(index)}>×</button>
                         </li>
                     )
                 })
