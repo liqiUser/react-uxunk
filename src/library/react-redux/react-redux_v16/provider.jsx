@@ -3,6 +3,8 @@
  */
 import React from 'react';
 
+import PropTypes from 'prop-types';
+
 const Context = React.createContext();
 
 /**
@@ -52,3 +54,7 @@ export default class Provider extends React.Component {
         )
     }
 };
+
+Provider.propTypes = {
+    value: PropTypes.object.isRequired
+}
