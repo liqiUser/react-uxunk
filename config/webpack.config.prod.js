@@ -90,7 +90,10 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-      
+      // 配置 uxunk 和 react-uxunk 在 src 下的 library 中
+      'library': path.resolve(__dirname, '../src/library'),
+      // 配置使用 uxunk 的代码在 store 中
+      'store': path.resolve(__dirname, '../src/store'),
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',

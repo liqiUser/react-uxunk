@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { connect } from '../../react-redux';
+import { connect } from 'library/react-redux/react-redux_v16';
 
-import { todoAction } from '../../redux/action';
+import { todoAction } from 'store/action';
 
 function filterTodoList(todoList, filter) {
     let newTodoList;

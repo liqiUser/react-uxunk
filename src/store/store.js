@@ -1,4 +1,4 @@
-import { createStore } from '../uxunk';
+import { createStore } from 'library/uxunk';
 
 import reducer from './reducer';
 

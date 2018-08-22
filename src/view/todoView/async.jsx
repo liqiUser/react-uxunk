@@ -1,7 +1,11 @@
 import React from 'react';
-import store from '../../redux/store';
-import { bindActionCreators } from '../../uxunk';
-import { asynchronousAction } from '../../redux/action';
+
+import store from 'store/store';
+
+import { asynchronousAction } from 'store/action';
+
+import { bindActionCreators } from 'library/uxunk';
+
 
 const asyncDispatch =  bindActionCreators(asynchronousAction, store.dispatch);
 

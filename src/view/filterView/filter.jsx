@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { connect } from '../../react-redux';
+import { connect } from 'library/react-redux/react-redux_v16';
 
-import { filterAction } from '../../redux/action';
+import { filterAction } from 'store/action';
 
 const FilterList = {
     all: '全部',

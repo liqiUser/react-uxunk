@@ -1,4 +1,4 @@
-import { combineReducers } from '../../uxunk';
+import { combineReducers } from 'library/uxunk';
 
 import filterReducer from './filterReducer';
 import todoReducer from './todoReducer';

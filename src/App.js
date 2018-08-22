@@ -1,10 +1,10 @@
 import React from 'react';
 
-import store from './redux/store';
+import { Provider } from 'library/react-redux/react-redux_v16';
+
+import store from 'store/store';
 
 import View from './view';
-
-import { Provider } from './react-redux';
 
 export default class App extends React.Component {
     render() {
