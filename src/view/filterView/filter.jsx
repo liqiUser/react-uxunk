@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { connect } from 'library/react-redux/react-redux_v16';
+import { connect } from 'library/react-redux/react-redux_v15';
 
 import { filterAction } from 'store/action';
 

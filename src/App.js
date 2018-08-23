@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Provider } from 'library/react-redux/react-redux_v16';
+import { Provider } from 'library/react-redux/react-redux_v15';
 
 import store from 'store/store';
 
