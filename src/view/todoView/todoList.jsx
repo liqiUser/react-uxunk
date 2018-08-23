@@ -5,13 +5,11 @@ import { connect } from 'library/react-redux/react-redux_v15';
 import { todoAction } from 'store/action';
 
 function filterTodoList(todoList, filter) {
-    let newTodoList;
+    let newTodoList = todoList.map((item, index) => ({...item, index}));
     if (filter === 'done') {
-        newTodoList = todoList.filter(item => item.isFinish);
+        newTodoList = newTodoList.filter(item => item.isFinish);
     } else if (filter === 'undone') {
-        newTodoList = todoList.filter(item => !item.isFinish);
-    } else {
-        newTodoList = todoList;
+        newTodoList = newTodoList.filter(item => !item.isFinish);
     }
     return newTodoList
 }
@@ -37,16 +35,16 @@ function TodoList({todoList, removeList, toggleList}) {
     return (
         <ul>
             {
-                todoList.map((item, index) => {
+                todoList.map(item => {
                     return (
-                        <li key={index}>
-                            <span onClick={() => toggleList(index)}>
+                        <li key={item.index}>
+                            <span onClick={() => toggleList(item.index)}>
                                 {
                                     item.isFinish ? 
                                         <s>{item.text}</s> : <span>{item.text}</span>
                                 }
                             </span>
-                            <button onClick={() => removeList(index)}>×</button>
+                            <button onClick={() => removeList(item.index)}>×</button>
                         </li>
                     )
                 })
