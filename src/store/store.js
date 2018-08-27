@@ -1,4 +1,6 @@
-import { createStore } from 'library/uxunk';
+import { createStore, applyMiddleware } from 'library/uxunk';
+
+import { logger, stater } from './middlewares';
 
 import reducer from './reducer';
 
@@ -7,6 +9,6 @@ const defaultState = {
     filter: 'all'
 }
 
-const store = createStore(reducer, defaultState);
+const store = createStore(reducer, defaultState, applyMiddleware(logger, stater));
 
 export default store;
